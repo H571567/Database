@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="brukerPersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+		<class>no.stian.skole.oving1_JPA.types.EntityBruker</class>
+		<class>no.stian.skole.oving1_JPA.types.EntityTest</class>
+		<class>no.stian.skole.oving1_JPA.types.EntityAnsatt</class>
+		<class>no.stian.skole.oving1_JPA.types.EntityAvdeling</class>
+		<class>no.stian.skole.oving1_JPA.types.EntityProsjekt</class>
+		<class>no.stian.skole.oving1_JPA.types.Entityansattprosjekt</class>
+		
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://data1.hib.no:5433/h578056" />
+			<property name="javax.persistence.jdbc.user"
+				value="h578056" />
+			<property name="javax.persistence.jdbc.password"
+				value="pass" />
+<!-- 			<property name="eclipselink.logging.level" value="Finest" /> -->
+			<property name="eclipselink.logging.level" value="WARNING" />
+<!-- 			<property name="eclipselink.logging.level" value="FINE"/> -->
+		</properties>
+	</persistence-unit>	
+</persistence>
